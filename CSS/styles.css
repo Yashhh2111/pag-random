@@ -1,0 +1,239 @@
+/* Mobile first */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff7ed;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+
+}
+
+.encabezado {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffefdb;
+    padding: 5px;
+}
+
+.logo {
+    width: 70px;
+    animation: latido 1.5s infinite;
+}
+
+.menu {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.e {
+    padding: 10px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+}
+.japones {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: #B3001B;
+    animation: brillo 2s infinite;
+}
+
+.inicio {
+    font-family: "Playfair Display", serif;
+    padding: 20px;
+    background: linear-gradient(rgba(247, 243, 238, 0.4), rgba(141, 94, 37, 0.4)), url('./fondo1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rojo {
+    color: #B3001B;
+}
+
+.intro {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    max-width: 250px;
+    line-height: 1.6;
+    border-top: 1px solid #B3001B;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    text-align:left;
+}
+
+#click {
+    background-color: #8F0016;
+    color: white;
+    border: none;
+    padding: 10px 60px;
+    font-size: 20px;
+    border-radius: 0px 50px 50px 0px;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.demografias {
+    padding: 30px;
+}
+.contenido {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+.informacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.337);
+    position: relative;
+}
+.informacion p {
+    flex-grow: 1;
+}
+
+.super {
+    position: relative;
+}
+.logotarjeta{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 60px;
+    height: 60px;
+    animation: logoAnime 2.5s ease-in-out infinite;
+}
+
+.demo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    background-color: #741111;
+    color: white;
+}
+
+p {
+    text-align: justify;
+}
+
+.boton {
+    background-color: #6D4C41;
+    color: #E8DED2;
+    align-self:center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Transiciones/hover */
+
+ .e:hover {
+    background-color: #741111;
+    padding: 10px;
+    color: #ffefdc;
+    border-radius: 40px;
+}
+
+#click:hover {
+    opacity: 1;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background-color: #c80808;
+    color: #ffb0b0;
+}
+/* Animaciones */
+@keyframes logoAnime{
+
+    0%,100%{
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform: translateY(-5px) rotate(8deg);
+    }
+
+}
+
+@keyframes latido{
+
+    0%,100%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.15);
+    }
+
+}
+@keyframes brillo{
+
+    0%,100%{
+        opacity: .6;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+}
+
+@media(min-width: 768px) {
+.inicio {
+    background: linear-gradient(rgba(247, 243, 238, 0.4), rgba(141, 94, 37, 0.4)), url('./fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+}
+
+@media(min-width: 992px){
+
+    .inicio {
+    background: linear-gradient(rgba(247, 243, 238, 0.4), rgba(141, 94, 37, 0.4)), url('./fondo3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenido {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.logotarjeta {
+    width: 30px;
+    height: auto;
+}
+
+}
